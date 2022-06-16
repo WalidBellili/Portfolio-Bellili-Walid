@@ -10,35 +10,15 @@ main {
 header {
   width: 100%;
   height: 100px;
-  background: red;
+  border-bottom: 2px solid grey;
   margin: 0 auto;
-}
-aside {
-  position: absolute;
-  height: 90vh;
-  width: 270px;
-  background: #000;
-  top: 0;
-  right: 0;
-  display: none;
-}
-aside section {
-  display: flex;
-  flex-direction: column;
-}
-aside span {
-  width: 60px;
-  height: 6px;
-  background: white;
-  margin: 5px;
-  border: 2px solid;
-  border-radius: 20px;
 }
 
 .header-main {
   height: 300px;
   width: 100%;
   margin: 10px;
+  margin-top: 50px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -61,7 +41,6 @@ aside span {
 .first-container,
 .second-container {
   width: 100%;
-  background: blue;
   height: 300px;
   margin: 0 auto;
   display: flex;
@@ -71,7 +50,6 @@ aside span {
 .right-two {
   height: 100%;
   width: 60%;
-  background: green;
 }
 .right-one,
 .left-two {
@@ -79,8 +57,88 @@ aside span {
   width: 40%;
   background: orange;
 }
+.right-two {
+  background: url(./projet1.jpg) center/cover;
+}
 .right-one {
   background: url(./imac-g99fb1e01f_1920-removebg-preview.png) center/cover;
+  height: 60%;
+}
+#side-bar {
+  position: absolute;
+  width: 230px;
+  height: 100%;
+  background: #09fbba;
+  top: 0;
+  left: -230px;
+  transition: 0.5s ease-out;
+  z-index: 4;
+}
+.toggle-btn {
+  position: absolute;
+  top: 30px;
+  left: 240px;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}
+.toggle-btn span {
+  width: 60px;
+  height: 10px;
+  border-radius: 5px;
+  background: #1501010c;
+  display: block;
+  margin-top: 4px;
+  transition: 0.3s ease;
+}
+li {
+  color: #292929;
+  list-style: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding-left: 5px;
+}
+li:hover {
+  background: #292929;
+  color: #fcfcfb;
+}
+#side-bar.active {
+  left: 0;
+}
+.active span {
+  position: absolute;
+}
+.active span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.active span:nth-child(2) {
+  opacity: 0;
+}
+.active span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+.active ~ .content {
+  opacity: 0.3;
+}
+.ml9 {
+  position: relative;
+  font-weight: 200;
+  font-size: 3em;
+}
+
+.ml9 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml9 .letter {
+  transform-origin: 50% 100%;
+  display: inline-block;
+  line-height: 1em;
 }
 .skills {
   width: 100%;
