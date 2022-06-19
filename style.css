@@ -1,168 +1,117 @@
+@font-face {
+  font-family: "font-regular";
+  src: url(./assets/fonts/Open_Sans/static/OpenSans/OpenSans-Regular.ttf);
+}
+@font-face {
+  font-family: "font-bold";
+  src: url(./assets/fonts/Open_Sans/static/OpenSans/OpenSans-Bold.ttf);
+}
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "font-bold" sans-serif;
 }
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  position: relative;
 }
 header {
   width: 100%;
-  height: 100px;
-  border-bottom: 2px solid grey;
-  margin: 0 auto;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 10px 10px 45px -2px rgba(0, 0, 0, 0.59);
+  -webkit-box-shadow: 10px 10px 45px -2px rgba(0, 0, 0, 0.59);
+  -moz-box-shadow: 10px 10px 45px -2px rgba(0, 0, 0, 0.59);
 }
-
-.header-main {
-  height: 300px;
-  width: 100%;
-  margin: 10px;
-  margin-top: 50px;
+nav {
+  width: 70%;
+}
+nav ul {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-.header-main h2 {
-  font-size: 30px;
-  font-weight: bold;
-}
-.header-main .txt {
-  width: 70%;
-  height: 100%;
-  margin-top: 80px;
-}
-.illustration {
-  background: url(./Photo_fun_Walid.JPG) center/cover;
-  height: 170px;
-  width: 170px;
-  border-radius: 200px;
-}
-.first-container,
-.second-container {
-  width: 100%;
-  height: 300px;
-  margin: 0 auto;
+/* ***************************** */
+.first-container {
+  height: 400px;
+  width: 60%;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 10px 10px 45px -2px rgba(0, 0, 0, 0.59);
+  -webkit-box-shadow: 10px 10px 45px -2px rgba(0, 0, 0, 0.59);
+  -moz-box-shadow: 10px 10px 45px -2px rgba(0, 0, 0, 0.59);
+}
+.reseau {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-left: 60px;
+}
+.txt {
+  border-radius: 30px;
+  text-align: center;
+  width: 40%;
+  height: 300px;
+}
+.txt h1 p {
+  margin-bottom: 20px;
+}
+.txt p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   margin-top: 50px;
 }
-.left-one,
-.right-two {
-  height: 100%;
+.img {
+  margin-right: 50px;
+}
+img {
+  border-radius: 100px;
+}
+button {
+  width: 200px;
+  height: 40px;
+  border-radius: 40px;
+  border: 0px solid transparent;
+  margin-top: 30px;
+}
+.second-txt article {
+  display: flex;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+/* *************************** */
+.second-container {
+  height: 300px;
   width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 10px 10px 45px -2px rgba(0, 0, 0, 0.59);
+  -webkit-box-shadow: 10px 10px 45px -2px rgba(0, 0, 0, 0.59);
+  -moz-box-shadow: 10px 10px 45px -2px rgba(0, 0, 0, 0.59);
 }
-.right-one,
-.left-two {
-  height: 100%;
+.second-txt {
   width: 40%;
-  background: orange;
 }
-.right-two {
-  background: url(./projet1.jpg) center/cover;
-}
-.right-one {
-  background: url(./imac-g99fb1e01f_1920-removebg-preview.png) center/cover;
-  height: 60%;
-}
-#side-bar {
-  position: absolute;
-  width: 230px;
-  height: 100%;
-  background: #09fbba;
-  top: 0;
-  left: -230px;
-  transition: 0.5s ease-out;
-  z-index: 4;
-}
-.toggle-btn {
-  position: absolute;
-  top: 30px;
-  left: 240px;
-  cursor: pointer;
-  height: 50px;
-  width: 50px;
-}
-.toggle-btn span {
-  width: 60px;
-  height: 10px;
-  border-radius: 5px;
-  background: #1501010c;
-  display: block;
-  margin-top: 4px;
-  transition: 0.3s ease;
-}
-li {
-  color: #292929;
-  list-style: none;
-  font-size: 2.5rem;
-  cursor: pointer;
-  padding-left: 5px;
-}
-li:hover {
-  background: #292929;
-  color: #fcfcfb;
-}
-#side-bar.active {
-  left: 0;
-}
-.active span {
-  position: absolute;
-}
-.active span:nth-child(1) {
-  transform: rotate(45deg);
-}
-.active span:nth-child(2) {
-  opacity: 0;
-}
-.active span:nth-child(3) {
-  transform: rotate(-45deg);
-}
-.active ~ .content {
-  opacity: 0.3;
-}
-.ml9 {
-  position: relative;
-  font-weight: 200;
-  font-size: 3em;
-}
-
-.ml9 .text-wrapper {
-  position: relative;
-  display: inline-block;
-  padding-top: 0.2em;
-  padding-right: 0.05em;
-  padding-bottom: 0.1em;
-  overflow: hidden;
-}
-
-.ml9 .letter {
-  transform-origin: 50% 100%;
-  display: inline-block;
-  line-height: 1em;
+.second-txt h3 {
+  margin-bottom: 20px;
+  margin-left: 10px;
 }
 .skills {
-  width: 100%;
-  height: 400px;
-  background: purple;
-  margin-top: 50px;
-}
-.project {
-  width: 100%;
-  height: 300px;
-  background: blue;
-  margin-top: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.project article {
-  height: 200px;
-  width: 200px;
-  background: green;
-}
-footer {
-  width: 100%;
-  height: 200px;
-  background: yellow;
-  margin-top: 50px;
+  box-shadow: 10px 10px 45px -2px rgba(0, 0, 0, 0.59);
+  -webkit-box-shadow: 10px 10px 45px -2px rgba(0, 0, 0, 0.59);
+  -moz-box-shadow: 10px 10px 45px -2px rgba(0, 0, 0, 0.59);
 }
