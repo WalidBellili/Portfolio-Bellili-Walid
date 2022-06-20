@@ -126,8 +126,10 @@ main {
 
 .carousel-item img {
   width: 100%;
-
   height: 407px;
+}
+.carousel-item img:hover {
+  transform: scale(1.1);
 }
 
 /* ************************************************** */
@@ -174,4 +176,70 @@ address {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 400px) {
+  .ml9 {
+    position: relative;
+    font-weight: 200;
+    font-size: 1.8em;
+  }
+  .first-container {
+    flex-direction: column-reverse;
+    height: 1000px;
+    width: 100%;
+  }
+  .txt {
+    width: 90%;
+  }
+
+  .carousel-item img {
+    width: 300px;
+  }
+  .techno {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 768px) {
+  .ml9 {
+    position: relative;
+    font-weight: 200;
+    font-size: 1.8em;
+  }
+  .first-container {
+    flex-direction: column-reverse;
+    height: 1000px;
+    width: 100%;
+  }
+  .txt {
+    width: 90%;
+  }
+
+  .carousel-item img {
+    width: 300px;
+  }
+  .techno {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 992px) {
+  .ml9 {
+    position: relative;
+    font-weight: 200;
+    font-size: 1.8em;
+  }
+  .first-container {
+    flex-direction: column-reverse;
+    height: 1000px;
+    width: 100%;
+  }
+  .txt {
+    width: 90%;
+  }
+
+  .carousel-item img {
+    width: 300px;
+  }
+  .techno {
+    flex-wrap: wrap;
+  }
 }
